@@ -13,9 +13,8 @@ function TaskList({ task, status, classes }) {
         <div className={classes.status}>{status.label}</div>
       </Box>
       <div className={classes.wrapperListTask}>
-        {task.map(task => {
-          const { title, description } = task;
-          return <TaskItem key={task.id} status={status} task={task} />;
+        {task.map(item => {
+          return <TaskItem key={item.id} status={status} task={item} />;
         })}
       </div>
     </Grid>
